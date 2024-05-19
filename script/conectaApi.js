@@ -32,23 +32,18 @@ async function criarProduto(nome, valor, imagem, id) {
 }
 
 
-
-
-async function excluirProduto(idProduto) {
+async function excluirProduto(ProdutoId) {
     try {
-        const conexao = await fetch(`http://localhost:3000/produtos/${idProduto}`, {
+        const conexao = await fetch(`http://localhost:3000/produtos/${ProdutoId}`, {
             method: "DELETE",
         });
         const data = await conexao.json();
         console.log(data); 
-        alert ("data");
     } catch (error) { 
         console.error("Erro ao deletar produto:", error);
         throw error;
     }  
 }
-
-
 
 
 async function buscaProduto(termoDeBusca) {

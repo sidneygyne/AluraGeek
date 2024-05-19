@@ -11,8 +11,8 @@ export default function constroiCard(nome, valor, imagem, id) {
     <h3 class="sessao__itens__titulo" >${nome}</h3>
     <div class="sessao__itens__valor__delete">
         <h2 class="sessao__itens__valor"> <strong>R$ ${valor}</strong></h2>
-        <button>
-            <a href=""><img src="./assets/excluir.png" alt="botao excluir" id="${id}" data-excluir></a>
+        <button id="${id}" data-excluir>
+            <a><img src="./assets/excluir.png" alt="botao excluir"></a>
         </button>
     </div>
 </div>`
@@ -22,14 +22,25 @@ export default function constroiCard(nome, valor, imagem, id) {
 
 
 async function listaProdutos() {
-    try {
+    try { 
         const listaApi = await conectaApi.listaProdutos();
-        listaApi.forEach(elemento => lista.appendChild(
-        constroiCard(elemento.nome, elemento.valor, elemento.imagem, elemento.id)))
+        if(listaApi.length > 0) {
+            listaApi.forEach(elemento => {
+                lista.appendChild(constroiCard(elemento.nome, elemento.valor, elemento.imagem, elemento.id));
+                });
+        
+            const botoesExcluir = document.querySelectorAll("[data-excluir]");
+            botoesExcluir.forEach(btn => {
+                btn.addEventListener("click", () => excluirProduto(btn.id));
+            });
+        } else {
+            products.innerHTML = `<h2 class="mensagem__titulo">Nenhum produto foi adicionado!</h2>`;
+        }
+        
     } catch (error) {
-       lista.innerHTML = `<h2 class="mensagem__titulo">Nenhum produto foi adicionado!</h2>` 
+       lista.innerHTML = `<h2 class="mensagem__titulo">Nenhum produto foi adicionado!</h2>`;
+       console.error("Erro ao listar produtos", error) 
     }
-    
 }
 
 listaProdutos();

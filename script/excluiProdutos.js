@@ -1,23 +1,24 @@
 import { conectaApi } from "./conectaApi.js";
 
-const botoesExcluir = document.querySelectorAll("[data-excluir]");
 
-async function excluirProduto(idProduto) {
+
+async function excluirProduto(ProdutoId) {
     try {
-        await conectaApi.excluirProduto(idProduto);
+        await conectaApi.excluirProduto(ProdutoId);
         alert ("Produto excluido com sucesso!");
     } catch(error) {
         console.error("Erro ao excluir protuto", error);
-        alert(e);
     }
+
+    window.location.reload(true);
 
 }
 
-botoesExcluir.forEach(botao => {
-    botao.addEventListener("click", () => {
-        const idDoProduto = botao.dataset.idProduto;
-        excluirProduto(idDoProduto);
-    })
-})
+// botoesExcluir.forEach(botao => {
+//     botao.addEventListener("click", () => {
+//         const idDoProduto = botao.dataset.idProduto;
+//         excluirProduto(idDoProduto);
+//     })
+// })
 
 export { excluirProduto };
