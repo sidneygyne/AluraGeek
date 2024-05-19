@@ -1,0 +1,58 @@
+{
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Computador",
+      "valor": "89,90",
+      "imagem": "https://cdn.awsli.com.br/954/954868/produto/35665852/a70bef26db.jpg"
+    },
+    {
+      "nome": "Sabão em pó",
+      "valor": "25.00",
+      "imagem": "https://m.media-amazon.com/images/I/7156VCzECoL._AC_SX425_.jpg",
+      "id": "qTAG2Rp"
+    },
+    {
+      "nome": "Amaciante",
+      "valor": "50.00",
+      "imagem": "https://m.media-amazon.com/images/I/51oiYm7b+1L._AC_SY300_SX300_.jpg",
+      "id": "vTDkTBC"
+    },
+    {
+      "nome": "Arroz",
+      "valor": "50.00",
+      "imagem": "https://m.media-amazon.com/images/I/71SJZI4rLWL._AC_SX679_.jpg",
+      "id": "Rc92MgI"
+    },
+    {
+      "nome": "Feijão",
+      "valor": "10.00",
+      "imagem": "https://m.media-amazon.com/images/I/71Ga6LIb-YL._AC_SX679_.jpg",
+      "id": "GfKwuEn"
+    },
+    {
+      "nome": "Ketchup",
+      "valor": "15.00",
+      "imagem": "https://m.media-amazon.com/images/I/61qaI1Z3FML._AC_SX679_.jpg",
+      "id": "YgvSBFb"
+    },
+    {
+      "nome": " Ketchup",
+      "valor": "19.00",
+      "imagem": "https://m.media-amazon.com/images/I/61qaI1Z3FML._AC_SX679_.jpg",
+      "id": "_w47Shm"
+    },
+    {
+      "nome": "Ketchup",
+      "valor": "50",
+      "imagem": "https://m.media-amazon.com/images/I/61qaI1Z3FML._AC_SX679_.jpg",
+      "id": "gTQhrCU"
+    },
+    {
+      "nome": "Feijão",
+      "valor": "50.00",
+      "imagem": "https://m.media-amazon.com/images/I/71Ga6LIb-YL._AC_SX679_.jpg",
+      "id": "l2xCmsY"
+    }
+  ]
+}
