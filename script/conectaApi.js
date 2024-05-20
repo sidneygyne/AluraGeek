@@ -46,10 +46,11 @@ async function excluirProduto(ProdutoId) {
 }
 
 
+
+// em contrução o campo de busca
 async function buscaProduto(termoDeBusca) {
     const conexao = await fetch(`http://localhost:3000/produtos?q=${termoDeBusca}`)
     const conexaoConvertida = await conexao.json();
-
     return conexaoConvertida;
 }
 

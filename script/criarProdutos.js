@@ -10,15 +10,14 @@ async function criarProduto(evento) {
     
 
     try {
-        await conectaApi.criarProduto(nome, valor, imagem, id);
+        await conectaApi.criarProduto(nome, valor, imagem);
         alert ("Produto cadastrado!");
 
     } catch (error) {
-        alert(e);
         console.error("Erro ao criar produto:", error); // pode tirar 
     }
 
     window.location.reload(true);
 }
 
-formulario.addEventListener("submit", evento => criarProduto(evento))
+formulario.addEventListener("submit", evento => criarProduto(evento));

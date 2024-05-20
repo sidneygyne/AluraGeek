@@ -4,12 +4,12 @@
 :root{
     --fonteTitulo: 'Press Start 2P', sans-serif;
     --fonteTexto: 'IBM Plex Mono', sans-serif;
-    --cor1: #12372A;
+    --cor0: black;
+    --cor1: #2d6e57;
     --cor2: #507b5f;
     --cor3: #98ad84;
     --cor4: #FBFADA;
     --cor5: #fcfcf7;
-    --cor0: black;
 }
 
 body{
@@ -41,12 +41,18 @@ body{
 .sessao__itens {
     padding: 40px;
     box-shadow: -10px 10px 10px 10px var(--cor2);
-    
 }
 
 .sessao__inserir{
     padding: 40px;
 
+}
+
+.mensagem__titulo {
+    font-family: var(--fonteTexto);
+    font-size: 1rem ;
+    font-weight: 900;
+    text-align: center;
 }
 
 .sessao__titulo {
@@ -114,12 +120,14 @@ body{
 }
 
 .formulario__campo {
+    display: flex;
+    flex-direction: column;
+
     
 }
 
 
-
-.sessao__inserir__formulario{
+.sessao__inserir__formulario {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -134,6 +142,11 @@ body{
     color: var(--cor1);
     padding: 15px;
     font-family: var(--fonteTexto);
+    
+}
+
+.campo__escrita:focus {
+    border: 7px solid var(--cor1);
 }
 
 .formulario__botao{
@@ -171,6 +184,11 @@ body{
   
 }
 
+.mensagem-erro{
+    font-size: 0.8rem;
+    color: red;
+}
+
 .rodape {
     background-color: var(--cor1);
     padding: 20px;
@@ -204,6 +222,7 @@ body{
 
 
 
+
 /* /////////////////////// TABLET ///////////////////////*/
 @media (max-width: 1023px) {
 .sessao {
@@ -216,7 +235,54 @@ body{
 /* /////////////////////// MOBLILE ///////////////////////*/
 
 @media (max-width: 767px) {
+    .cabecalho,
+    .rodape_logo {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
 
+    .logo__add {
+        display: none;
+    }
+
+    .sessao {
+        margin: 20px;
+        padding: 0 ;
+        gap:70px;
+        max-width: 100%;
+    }
+
+    .sessao__titulo {
+        font-size: 1.5rem; 
+    }
+
+    .formulario__botao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sessao__titulo {
+        margin: 10px;
+    }
+
+    .sessao__inserir__formulario {
+        gap: 20px;
+    }
 }
 
+/* /////////////////////// MOBLILE - MENOR ///////////////////////*/
 
+@media (max-width: 400px) {
+    .campo__escrita {
+        width: 100%;
+        height: auto;
+    }
+
+    .sessao__titulo {
+        font-size: 0.75rem; 
+    }
+
+    .logo {
+        display: none;
+    }
+}
