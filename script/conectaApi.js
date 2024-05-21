@@ -1,17 +1,17 @@
 // json-server --watch db.json
 // http://localhost:3000/produtos
-// https://alura-geek-json-server.vercel.app/produtos
+// https://json-server-rho-lovat.vercel.app/produtos
 
 
 async function listaProdutos () {
-    const conexao = await fetch("https://alura-geek-json-server.vercel.app/produtos"); // servidor criado pelo comando: json-server --watch bd.joson  (Endpoints: http://localhost:3000/videos)
+    const conexao = await fetch("https://json-server-rho-lovat.vercel.app/produtos"); // servidor criado pelo comando: json-server --watch bd.joson  (Endpoints: http://localhost:3000/videos)
     const conexaoConvertida = await conexao.json(); // Convertendo os dados recebidos em um objeto JSON
 
     return conexaoConvertida;
 }
 
 async function criarProduto(nome, valor, imagem, id) {
-    const conexao =  await fetch("https://alura-geek-json-server.vercel.app/produtos", {
+    const conexao =  await fetch("https://json-server-rho-lovat.vercel.app/produtos", {
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -35,7 +35,7 @@ async function criarProduto(nome, valor, imagem, id) {
 
 async function excluirProduto(ProdutoId) {
     try {
-        const conexao = await fetch(`https://alura-geek-json-server.vercel.app/produtos/${ProdutoId}`, {
+        const conexao = await fetch(`https://json-server-rho-lovat.vercel.app/produtos/${ProdutoId}`, {
             method: "DELETE",
         });
         const data = await conexao.json();
@@ -50,7 +50,7 @@ async function excluirProduto(ProdutoId) {
 
 // em contrução o campo de busca
 async function buscaProduto(termoDeBusca) {
-    const conexao = await fetch(`https://alura-geek-json-server.vercel.app/produtos?q=${termoDeBusca}`)
+    const conexao = await fetch(`https://json-server-rho-lovat.vercel.app/produtos?q=${termoDeBusca}`)
     const conexaoConvertida = await conexao.json();
     return conexaoConvertida;
 }
